@@ -10,9 +10,12 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 
 
-load_dotenv()
+# load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Load secrets from Streamlit
+OPENAI_API_KEY = st.secrets["openai"]["api_key"]
 
 embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
