@@ -1,0 +1,9 @@
+streamlit  # framework for building web applications in Python
+PyPDF2
+langchain  # framework for developing applications related to language models
+langchain_core
+langchain_community  # modules and extensions for the Langchain framework
+langchain_openai
+spacy  #  advanced natural language processing in Python
+faiss-cpu  # similarity search and clustering of dense vectors
+python-dotenv
