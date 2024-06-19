@@ -22,19 +22,13 @@ py -m venv rag-pdf
 pip install -r requirements.txt
 ```
 
-4. Install spaCy `en_core_web_sm` model
-
-```sh
-python -m spacy download en_core_web_sm
-```
-
-5. Create a `.env` file with a OPENAI_API_KEY variable
+4. Create a `.env` file with a OPENAI_API_KEY variable
 
 ```sh
 OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 ```
 
-6. Run the app
+5. Run the app
 
 ```sh
 streamlit run .\app.py

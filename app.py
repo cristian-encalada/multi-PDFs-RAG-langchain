@@ -4,7 +4,6 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_community.embeddings.spacy_embeddings import SpacyEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.tools.retriever import create_retriever_tool
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -15,7 +14,8 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-embeddings = SpacyEmbeddings(model_name="en_core_web_sm")
+embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
+
 def pdf_read(pdf_doc):
     text = ""
     for pdf in pdf_doc:
